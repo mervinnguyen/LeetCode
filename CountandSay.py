@@ -23,15 +23,15 @@ class Solution(object):
     def countAndSay(self,n):
         def count(s):
             count = 1
-            res = ''
+            x = ''
             for i in range(1,len(s)):
                 if s[i] == s[i-1]:
                     count += 1
                 else:
-                    res += str(count) + s[i-1]
+                    x += str(count) + s[i-1]
                     count = 1
-            res += str(count) + s[-1]
-            return res
+            x += str(count) + s[-1]
+            return x
         s = '1'
         for i in range(1,n):
             s = count(s)
