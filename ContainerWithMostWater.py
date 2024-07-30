@@ -16,9 +16,9 @@ class Solution(object):
     def maxArea(self, height):
         left = 0
         right = len(height) - 1
-        max_area = 0
+        maxArea = 0
         while left < right:
-            max_area = max(max_area, min(height[left], height[right]) * (right - left))
+            maxArea = max(maxArea, min(height[left], height[right]) * (right - left))
             if height[left] < height[right]:
                 left += 1
             else:
